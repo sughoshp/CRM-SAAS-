@@ -19,7 +19,7 @@ class Project(models.Model):
         related_name="created_projects"
     )
 
-    # this is just for people how are going to be part of this project and will have permission to List details 
+    # this is just for people who are going to be part of this project and will have permission to List details 
     members = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         related_name="members_projects")

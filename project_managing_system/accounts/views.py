@@ -44,7 +44,7 @@ class UserViewSet(ModelViewSet):
             return UserCreateSerializer
         return UserSerializer
 
-    @action(detail=False, methods=["get"], url_path="me")
+    @action(detail=False, methods=["get"], url_path="me", permission_classes=[IsAuthenticated],)
     def me(self, request):
         """
         Returns logged-in user's details.
